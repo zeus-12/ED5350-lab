@@ -6,10 +6,10 @@ print("() - Parenthesis\n** - Exponent\n+x - Unary Plus, -x - Unary Minus, ~x - 
 # testing
 equation = 5 * 6 - 8 /4
 # applying operator precedence  - PEMDAS
-5 * 6 - 8 /4 
-5 * 6 - 2.0
-30 -2.0
-28.0
+# 5 * 6 - 8 /4 
+# 5 * 6 - 2.0
+# 30 -2.0
+# 28.0
 print("\n",equation == 28.0)
 
 #Hence proved.
