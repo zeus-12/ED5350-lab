@@ -1,13 +1,16 @@
-def transpose(mat):
-    for row_index in range(3):
-        for col_index in range(3):
-            mat[row_index][col_index], mat[col_index][row_index] = mat[col_index][row_index],mat[row_index][col_index] 
-        
-    return mat
+def transposeWZip(mat):
+    transpose_lst = list(zip(*mat)) 
+    return transpose_lst
 
-
-
-
+def transposeWOZip(mat):
+    rows = []
+    
+    for i in range (3):     
+        cur_row = []
+        for j in range (3):
+            cur_row.append(mat[j][i])    
+        rows.append(cur_row)
+    return rows
 
 def addition(mat_1,mat_2):
     result=[]
@@ -15,7 +18,7 @@ def addition(mat_1,mat_2):
         cur_row = [0,0,0]
         for col_index in range(3):
             cur_row[col_index] = mat_1[row_index][col_index] + mat_2[row_index][col_index]
-        result.append(tuple(cur_row))
+        result.append(cur_row)
 
     return(result)
 
@@ -25,43 +28,44 @@ def subtraction(mat_1,mat_2):
         cur_row = [0,0,0]
         for col_index in range(3):
             cur_row[col_index] = mat_1[row_index][col_index] - mat_2[row_index][col_index]
-        result.append(tuple(cur_row))
+        result.append(cur_row)
 
     return(result)
 
+def trace(mat):
+    trace = 0
+    for i in range (len(mat)):
+        trace += mat[i][i]
+    return trace
+
+
+
+mat1 = ([1,2,3],[7,8,9],[4,5,6])
+mat2 = ([3,5,7],[9,7,5],[1,5,9])
 # matrix 1
-a_row_1 = [1,2,3]
-a_row_2 = [7,8,9]
-a_row_3 = [4,5,6]
+# [1,2,3]
+# [7,8,9]
+# [4,5,6]
 
-# matrix 2
-b_row_1 = [3,5,7]
-b_row_2 = [9,7,5]
-b_row_3 = [1,5,9]
-
-matrix_1 = list(zip(a_row_1,a_row_2,a_row_3))
-print(matrix_1)
-
-matrix_2 = list(zip(b_row_1,b_row_2,b_row_3))
-print(matrix_2)
+#  matrix 2
+# [3,5,7]
+# [9,7,5]
+# [1,5,9]
 
 
-sum = addition(matrix_1,matrix_2)
+sum = addition(mat1,mat2)
 print("Sum is", sum)
 
-diff = subtraction(matrix_1,matrix_2)
+diff = subtraction(mat1,mat2)
 print("Difference is ",diff)
 
 
-transpose_1 = transpose(matrix_1)
-print(f"{transpose_1} is the transpose of {matrix_1}")
+transpose_with_zip = transposeWZip(mat1)
+print(f"Transpose w zip is {transpose_with_zip}")
 
-# mat1 = ([1,2,3,4],[5,6,7,8])
-# print(mat1)
-# print(*mat1)
 
-# ite = zip(*mat1)
-# print(*ite)
+transpose_without_zip = transposeWOZip(mat1)
+print(f"Transpose w.o zip is {transpose_without_zip}")
 
-# lst = list(ite)
-# print(lst)   
+trace_1 = trace(mat1)
+print(f"Trace is {trace_1}")
