@@ -2,18 +2,14 @@
 test1= ["earth", "heart","tearh"]
 test2=["earth", "hear", "ear"]
 
-lst= []
-
-flag = True
-for test in test1, test2:
-    print(f"For {test}")
+def checkAnagram(test):
+    flag = True
     test_result = set(list(test[0]))
     for item in test:
         sett = set(list(item))
         if sett != test_result:
-            flag = False
-            break
+            return False
+    return flag
 
-    print(flag,"\n")
-
-
+for test in test1, test2:
+    print(f"For {test}, {checkAnagram(test)}")
