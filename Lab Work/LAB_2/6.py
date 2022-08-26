@@ -19,8 +19,8 @@ if ln%2 == 0:
     ar2 = ar[ln//2: ]   
 else:
     ar1 = ar[:ln//2 ]
-    ar2 = ar[ln//2: ]
+    ar2 = ar[1+ln//2: ]
 
 
-print(median)
+print(ln, median)
 print(ar1,ar2)
