@@ -1,7 +1,15 @@
-f1 = open('customerNames.txt','r')
-f2 = open('tableNumbers.txt','r')
-f3 = open('orderDetails.txt','r')
-f4 = open('priceList.txt','r')
+import os
+dir = os.path.dirname(__file__)
+fileName1 = os.path.join(dir,'customerNames.txt')
+fileName2 = os.path.join(dir,'tableNumbers.txt')
+fileName3 = os.path.join(dir,'orderDetails.txt')
+fileName4 = os.path.join(dir,'priceList.txt')
+
+f1 = open(fileName1,'r')
+f2 = open(fileName2,'r')
+f3 = open(fileName3,'r')
+f4 = open(fileName4,'r')
+
 
 names=f1.readlines()
 tableno=f2.readlines()
@@ -31,15 +39,13 @@ for i in range (len(names)):
         totalPrice += foodWithPrice[item] * int(ordersWithQty[item])
 
 
+    billFileLocation = os.path.join(dir,'Billfile.txt')
+    billFile = open(billFileLocation,"a")
 
-    billFile = open('Billfile.txt',"a")
-    # print(billFile.read())
     billFile.write("___BILL___\n")
     billFile.write(f"Customer Name:{names[i].strip()}\n")
     for item in bill:
-        print(bill[item])
         itemDetail = bill[item]
-        # print(itemDetail["qty"])
         billFile.write(f"{item}:{itemDetail['qty']} * {itemDetail['price']} = {itemDetail['qty'] * itemDetail['price']}\n")
 
     billFile.write(f"Total:{totalPrice}\n")
