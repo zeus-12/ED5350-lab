@@ -1,0 +1,31 @@
+___BILL___
+Customer Name:vishnu
+ChickenBiryani:1 * 100 = 100
+ChickenFry:3 * 80 = 240
+Total:340
+___________
+___BILL___
+Customer Name:pranoy
+ChickenBiryani:3 * 100 = 300
+ChickenFry:1 * 80 = 80
+ChickenCurry:2 * 75 = 150
+Total:530
+___________
+___BILL___
+Customer Name:albin
+Rice:2 * 40 = 80
+ChickenCurry:2 * 75 = 150
+Total:230
+___________
+___BILL___
+Customer Name:thazeel
+ChickenFry:2 * 80 = 160
+ChickenCurry:1 * 75 = 75
+Total:235
+___________
+___BILL___
+Customer Name:nihad
+ChickenBiryani:1 * 100 = 100
+ChickenFry:1 * 80 = 80
+Total:180
+___________

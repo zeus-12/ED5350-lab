@@ -1,0 +1,1 @@
+ChickenBiryani-100,ChickenFry-80,ChickenCurry-75,Rice-40
