@@ -1,0 +1,6 @@
+Students: marks
+Vishnu: 20
+Pranoy: 50
+Albin: 80
+Thazeel: 50
+Nihad: 70

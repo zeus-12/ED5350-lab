@@ -30,7 +30,7 @@ def reverse_recursion(query,type):
 
         elif " " in query :
             space_index = query.index(" ")
-            res = query[:space_index:-1]
+            # res = query[:space_index:-1]
             return query[:space_index][::-1]+" " +  reverse_recursion(query[space_index+1:],type) 
 
 print(reverse_recursion("sun is hot","sentence"))

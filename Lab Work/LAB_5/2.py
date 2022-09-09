@@ -8,7 +8,6 @@ def fact_loop(n):
     return fact_1
 
 def fact_recursion(n):
-    fact_2 = 1
     if n ==1 :
         return 1
 
