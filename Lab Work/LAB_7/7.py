@@ -4,6 +4,7 @@ import math
 
 x = np.linspace(-3.14, 3.14, 100)
 y = [math.sin(i) for i in x]
+
 plt.plot(x, y, '-r')
 plt.xlabel('x')
 plt.ylabel('Sin(x)')

@@ -1,6 +1,6 @@
 import pandas as pd
 
-res = []
+res = [] 
 for i in range(5):
     name = input("Name : ")
     marks = input("Marks : ")
@@ -8,5 +8,4 @@ for i in range(5):
 
 w = pd.DataFrame(res, columns=['Student', 'Marks'])
 w.to_csv('marklist.csv', index=False)
-
 

@@ -1,5 +1,6 @@
 import os
 dir = os.path.dirname(__file__)
+
 fileName1 = os.path.join(dir,'customerNames.txt')
 fileName2 = os.path.join(dir,'tableNumbers.txt')
 fileName3 = os.path.join(dir,'orderDetails.txt')
