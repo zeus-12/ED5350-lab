@@ -3,8 +3,10 @@ class Polygon:
         self.length = length
 
 class Square(Polygon):
+    def __init__(self, length):
+        super().__init__(length)
+        
     def findarea(self):
-        super().__init__(self.length)
         return self.length**2
 
 sqr = Square(12)
